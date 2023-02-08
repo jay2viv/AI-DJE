@@ -1,10 +1,10 @@
 leftWristX = 0;
 leftWristY = 0;
-
 rightWristX = 0;
 rightWristY = 0;
 
 leftWrist_score = 0;
+rightWrist_score = 0;
 song1status = "";
 song2status = ""
 
@@ -66,7 +66,7 @@ function gotposes(results)
 {
     if(results.length > 0)
     {
-    console.log("results")
+    console.log(results)
 
     leftWristX = results[0].pose.leftWrist.x;
     leftWristY = results[0].pose.leftWrist.y;
@@ -75,6 +75,6 @@ function gotposes(results)
     rightWristY = results[0].pose.rightWrist.y;
 
     leftWrist_score = results[0].pose.keypoints[9].score;
-
+    rightWrist_score = results[0].pose.keypoints[10].score;
     }
 }
